@@ -1,0 +1,268 @@
+@font-face{
+    font-family: "Monserrat-M";
+    src: url("./font/Montserrat-Medium.ttf");
+}
+
+@font-face{
+    font-family: "Monserrat-SB";
+    src: url("./font/Montserrat-SemiBold.ttf");
+}
+
+@font-face{
+    font-family: "Monserrat-B";
+    src: url("./font/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Unbounded-B";
+    src: url('./font/Unbounded-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Unbounded-M";
+    src: url('./font/Unbounded-Medium.ttf');
+}
+
+body {
+    background-color: #090808;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.logo-or-nav {
+    font-family: "Monserrat-SB";
+    display: flex;
+}
+
+.logo {
+    font-family: "Monserrat-SB";
+    font-size: 26px;
+    color: white;
+}
+
+.container {
+    width: 1322px;
+    margin: auto auto;
+}
+
+
+.UnBMain {
+    font-family: "Unbounded-B";
+    font-size: 48px;
+    margin: 0px 0px 24px 0px;
+}
+
+.MoMeMain {
+    font-family: "Monserrat-M";
+    font-size: 24px;
+    margin: 0px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.nav div{
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.textmain {
+    color: white;
+    margin: 292px 0px 0px 0px;
+}
+
+.nav a {
+    color: #ADADAD;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.bstartgame {
+    margin: 0px 18px 0px 0px;
+    width: 225px;
+    height: 70px;
+    border-radius: 27px;
+    border: none;
+    background-color: #393939;
+    color: white;
+    font-family: "Monserrat-SB";
+    font-size: 23px;
+    padding: 21px 25px;
+}
+
+.dowlauncher {
+    width: 290px;
+    height: 70px;
+    border-radius: 27px;
+    border: none;
+    background-color: #212121;
+    color: white;
+    font-family: "Monserrat-SB";
+    font-size: 23px;
+    padding: 21px 25px;
+}
+
+.dowlauncher img {
+    margin-left: 15px;
+    width: 18px;
+    height: 18px;
+}
+
+.login-btn button {
+    width: 142px;
+    height: 64px;
+    border-radius: 27px;
+    border: none;
+    background-color: #212121;
+    color: white;
+    font-family: "Monserrat-M";
+    font-size: 18px;
+}
+
+.mainbutton {
+    display: flex;
+    margin: 55px 0px 0px 0px;
+}
+
+.container1 {
+    background-color: #101010;
+}
+
+.ktomi {
+    color: white;
+}
+
+.ktomi1 {
+    font-family: "Unbounded-B";
+    font-size: 36px;
+}
+
+.ktomi2 {
+    font-family: "Monserrat-M";
+    font-size: 24px;
+    color: #CFCFCF;
+}
+
+.container2 {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.container2 {
+    width: 1322px;
+    margin: auto auto;
+}
+
+.mainbutton {
+    margin-bottom: 260px;
+}
+
+
+.main {
+    width: 659px;
+}
+
+.main-index {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nicadmina {
+    font-family: "Monserrat-B";
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    margin-right: 30px;
+}
+
+.textadmina {
+    font-family: "Monserrat-M";
+    font-size: 24px;
+    color: #D1D1D1;
+}
+
+.doljnost {
+    width: 243px;
+    height: 37px;
+    border-radius: 8px;
+    font-family: "Unbounded-M";
+    font-size: 20px;
+    background-color: #27BC8F;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doljnost p{
+    margin: 0;
+}
+
+.admin-or-dev {
+    background-color: #1B1B1B;
+    width: 780px;
+    height: 600px;
+    border-radius: 27px;
+    
+}
+
+.mainicon {
+    width: 427px;
+    height: 475px;
+    border-radius: 27px;
+    background-image: linear-gradient(113deg,rgba(255,255,255,0)0%,rgba(255,255,255,0.10000000149011612)100%);
+    margin-top: 230px;
+}
+
+.name-admin {
+    display: flex;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+.image-flaim {
+    background-image: url(./png/flaim-main.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 427px;
+    height: 475px;
+    border-radius: 27px;
+}
+
+.admin-or-dev {
+    margin-top: 257px;
+}
+
+.ktomi2 {
+    line-height: 1.42;
+}
+
+.MoMeMain {
+    line-height: 1.42;
+}
+
+.login-btn img {
+    width: 19px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.login-btn div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
