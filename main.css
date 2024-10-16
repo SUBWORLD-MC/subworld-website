@@ -266,3 +266,48 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vopros img{
+    width: 514.28px;
+    height: 514.28px;
+}
+
+.admin-or-dev {
+    height: min-content;
+    width: 636px;
+    padding: 78px 91px 36px 53px;
+}
+
+.adminavatar {
+    margin-top: 69px;
+}
+
+
+.textadmina {
+    margin-top: 24px;
+    margin-bottom: 0;
+    line-height: 1.42;
+}
+
+.strelca {
+    width: 19px;
+    height: 30px;
+}
+
+.head {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%);
+    border-radius: 4px;
+}
+
+.adminavatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
