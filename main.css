@@ -52,7 +52,6 @@ header {
     margin: auto auto;
 }
 
-
 .UnBMain {
     font-family: "Unbounded-B";
     font-size: 48px;
@@ -310,4 +309,67 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.admin-image {
+    width: 520px;
+    height: 612px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.10000000149011612) 100%);
+    border-radius: 27px;
+    margin-top: 257px;
+    margin-bottom: 373px;
+    position: relative;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-image img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.faq {
+
+}
+
+.line {
+    width: 723px;
+    height: 2px;
+    background-color: #393939;
+    border-radius: 27px;
+}
+
+.cont-faq {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont-faq p {
+    font-family: "Monserrat-SB";
+    color: white;
+    font-size: 24px;
+}
+
+.faq-link {
+    width: 520px;
+    height: 422px;
+    background-color: #0A0A0A;
+    border: solid 2px #3B3B3B;
+    border-radius: 27px;
+}
+
+.container4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 370px;
+}
+
+.cont-faq {
+    padding-left: 35px;
+    padding-right: 60px;
 }
