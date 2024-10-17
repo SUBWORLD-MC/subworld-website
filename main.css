@@ -52,7 +52,6 @@ header {
     margin: auto auto;
 }
 
-
 .UnBMain {
     font-family: "Unbounded-B";
     font-size: 48px;
@@ -310,4 +309,202 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.admin-image {
+    width: 520px;
+    height: 612px;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.10000000149011612) 100%);
+    border-radius: 27px;
+    margin-top: 257px;
+    margin-bottom: 373px;
+    position: relative;
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-image img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.faq {
+
+}
+
+.line {
+    width: 723px;
+    height: 2px;
+    background-color: #393939;
+    border-radius: 27px;
+}
+
+.cont-faq {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont-faq p {
+    font-family: "Monserrat-SB";
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.faq-link {
+    width: 520px;
+    background-color: #0A0A0A;
+    border: solid 2px #3B3B3B;
+    border-radius: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 370px;
+}
+
+.cont-faq {
+    padding-left: 35px;
+    padding-right: 60px;
+}
+
+.strelca {
+    width: 19px;
+    height: 30px;
+}
+
+.cont-faq {
+    margin: 24px 0 24px 0;
+}
+
+.row {
+    width: 410px;
+    height: 290px;
+}
+
+.title-text {
+    font-family: "Unbounded-B";
+    font-size: 30px;
+    color: #fff;
+}
+
+.description-text {
+    font-family: "Monserrat-M";
+    font-size: 24px;
+    color: #CFCFCF;
+}
+
+.link-pos {
+    display: flex;
+}
+
+.link-pos img{
+    justify-content: end;
+}
+
+.image-link {
+    display: flex;
+    justify-content: end;
+}
+
+.dicord-image {
+    width: 700px;
+    height: 460px;
+    background-color: #212121;
+    border-radius: 27px;
+}
+
+.discord {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-text-discord {
+    font-family: "Unbounded-B";
+    font-size: 36px;
+    color: #fff;
+    margin: 20px 0 24px 0;
+}
+
+.description-text-discord {
+    font-family: "Monserrat-M";
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.42;
+    color: #CFCFCF;
+    margin: 0 0 35px 0;
+}
+
+.btn-join {
+    background-color: #212121;
+    border: none;
+    border-radius: 27px;
+    color: #FFFFFF;
+    padding: 21px 25px;
+    font-size: 18px;
+    font-family: "Monserrat-SB";
+}
+
+.btn-join img{
+    margin-left: 9px;
+}
+
+
+.footer {
+    margin-top: 370px;
+}
+
+.subworld-logo-footer {
+    justify-content: center;
+    display: flex;
+}
+
+.footer-div {
+    height: 328px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer {
+    font-family: "Monserrat-SB";
+    font-size: 26px;
+    margin-bottom: 196px;
+    margin-top: 55px;
+    color: #FFFFFF;
+}
+
+.lic {
+    font-family: "Monserrat-M";
+    font-size: 18px;
+    color: #CFCFCF;
+}
+
+.catalog-text {
+    margin-top: 24px;
+    color: white;
+    font-family: "Monserrat-SB";
+}
+
+.catalog-or-contact {
+    display: flex;
+}
+
+.catalog-or-contact a {
+    font-size: 18px;
+    font-family: "Monserrat-M";
+    text-decoration: none;
+    color: #CFCFCF;
+    margin-bottom: 10px;
 }
