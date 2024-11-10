@@ -1,0 +1,863 @@
+/* popa {
+    ⠄⠄⣿⣿⣿⣿⠘⡿⢛⣿⣿⣿⣿⣿⣧⢻⣿⣿⠃⠸⣿⣿⣿⠄⠄⠄⠄⠄
+    ⠄⠄⣿⣿⣿⣿⢀⠼⣛⣛⣭⢭⣟⣛⣛⣛⠿⠿⢆⡠⢿⣿⣿⠄⠄⠄⠄⠄
+    ⠄⠄⠸⣿⣿⢣⢶⣟⣿⣖⣿⣷⣻⣮⡿⣽⣿⣻⣖⣶⣤⣭⡉⠄⠄⠄⠄⠄
+    ⠄⠄⠄⢹⠣⣛⣣⣭⣭⣭⣁⡛⠻⢽⣿⣿⣿⣿⢻⣿⣿⣿⣽⡧⡄⠄⠄⠄
+    ⠄⠄⠄⠄⣼⣿⣿⣿⣿⣿⣿⣿⣿⣶⣌⡛⢿⣽⢘⣿⣷⣿⡻⠏⣛⣀⠄⠄
+    ⠄⠄⠄⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠙⡅⣿⠚⣡⣴⣿⣿⣿⡆⠄
+    ⠄⠄⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠄⣱⣾⣿⣿⣿⣿⣿⣿⠄
+    ⠄⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⠄
+    ⠄⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠣⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄
+    ⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠑⣿⣮⣝⣛⠿⠿⣿⣿⣿⣿⠄
+    ⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄
+} */
+
+/* popa2 {
+    ⣸⣿⣿⢏⣼⣶⣶⣶⣶⣤⣶⡤⠐⣿⣿⣿⣿⣿⣿⣿⣿
+    ⣯⣽⣛⠅⣾⣿⣿⣿⣿⣿⡽⣿⣧⡸⢿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⡷⠹⠛⠉⠁⠄⠄⠄⠄⠄⠄⠐⠛⠻⣿⣿⣿⣿
+    ⣿⣿⣿⠃⠄⠄⠄⠄⠄⣠⣤⣤⣤⡄⢤⣤⣤⣤⡘⠻⣿
+    ⣿⣿⡟⠄⠄⣀⣤⣶⣿⣿⣿⣿⣿⣿⣆⢻⣿⣿⣿⡎⠝
+    ⣿⡏⠄⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡎⣿⣿⣿⣿⠐
+    ⣿⡏⣲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢇⣿⣿⣿⡟⣼
+    ⣿⡠⠜⣿⣿⣿⣿⣟⡛⠿⠿⠿⠿⠟⠃⠾⠿⢟⡋⢶⣿
+    ⣿⣧⣄⠙⢿⣿⣿⣿⣿⣿⣷⣦⡀⢰⣾⣿⣿⡿⢣⣿⣿
+    ⣿⣿⣿⠂⣷⣶⣬⣭⣭⣭⣭⣵⢰⣴⣤⣤⣶⡾⢐⣿⣿
+    ⣿⣿⣿⣷⡘⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⢃⣼⣿⣿
+} */
+
+@font-face{
+  font-family: "Monserrat-M";
+  src: url("./font/Montserrat-Medium.ttf");
+}
+
+@font-face{
+  font-family: "Monserrat-SB";
+  src: url("./font/Montserrat-SemiBold.ttf");
+}
+
+@font-face{
+  font-family: "Monserrat-B";
+  src: url("./font/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Unbounded-B";
+  src: url('./font/Unbounded-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Unbounded-M";
+  src: url('./font/Unbounded-Medium.ttf');
+}
+
+
+.main-main {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.main-main.visible {
+  opacity: 1;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin-bottom: 10px;
+  margin-top:24px;
+  width: 1322px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-or-nav {
+  font-family: "Monserrat-SB";
+  display: flex;
+}
+
+.logo {
+  font-family: "Monserrat-SB";
+  font-size: 26px;
+  color: white;
+}
+
+.container {
+  width: 1322px;
+  margin: auto auto;
+}
+
+.UnBMain {
+  font-family: "Unbounded-B";
+  font-size: 48px;
+  margin: 0px 0px 24px 0px;
+}
+
+.MoMeMain {
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  margin: 0px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.nav div{
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.textmain {
+  color: white;
+  margin: 402px 0px 0px 0px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.bstartgame {
+  margin: 0px 18px 0px 0px;
+  width: 225px;
+  height: 70px;
+  border-radius: 27px;
+  border: none;
+  background-color: #393939;
+  color: white;
+  font-family: "Monserrat-SB";
+  font-size: 23px;
+  padding: 21px 25px;
+  transition: all 0.3s;
+}
+
+.dowlauncher {
+  width: 290px;
+  height: 70px;
+  border-radius: 27px;
+  border: none;
+  background-color: #212121;
+  color: white;
+  font-family: "Monserrat-SB";
+  font-size: 23px;
+  padding: 21px 25px;
+  transition: all 0.3s;
+}
+
+.dowlauncher img {
+  margin-left: 15px;
+  width: 18px;
+  height: 18px;
+}
+
+.login-btn button {
+  width: 142px;
+  height: 64px;
+  border-radius: 27px;
+  border: none;
+  background-color: #212121;
+  color: white;
+  font-family: "Monserrat-M";
+  font-size: 18px;
+}
+
+.mainbutton {
+  display: flex;
+  margin: 55px 0px 0px 0px;
+}
+
+.ktomi {
+  color: white;
+}
+
+.ktomi1 {
+  font-family: "Unbounded-B";
+  font-size: 36px;
+}
+
+.ktomi2 {
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  color: #CFCFCF;
+}
+
+.container2 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.container2 {
+  width: 1322px;
+  margin: auto auto;
+}
+
+.mainbutton {
+  margin-bottom: 260px;
+}
+
+
+.main {
+  width: 659px;
+}
+
+.main-index {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nicadmina {
+  font-family: "Monserrat-B";
+  font-size: 40px;
+  color: #fff;
+  margin: 0;
+  margin-right: 30px;
+}
+
+.textadmina {
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  color: #D1D1D1;
+  text-align: center;
+}
+
+.doljnost {
+  width: 191px;
+  height: 37px;
+  border-radius: 8px;
+  font-family: "Unbounded-M";
+  font-size: 20px;
+  border: solid 2px #27BC8F;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doljnost p{
+  margin: 0;
+  color: #27BC8F;
+}
+
+.admin-or-dev {
+  background-color: #1B1B1B;
+  border-radius: 27px;
+  
+}
+
+.mainicon {
+  width: 427px;
+  height: 475px;
+  border-radius: 27px;
+  background-image: linear-gradient(113deg,rgba(255,255,255,0)0%,rgba(255,255,255,0.10000000149011612)100%);
+  margin-top: 340px;
+}
+
+.name-admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.image-flaim {
+  position: absolute;
+  border-radius: 27px;
+  z-index: 99;
+  background-size: 100%;
+  transition: transform 0.5s ease;
+  top: 90px;
+  right: 10px;
+}
+
+.admin-or-dev {
+  margin-top: 257px;
+}
+
+.ktomi2 {
+  line-height: 1.42;
+}
+
+.MoMeMain {
+  line-height: 1.42;
+}
+
+.login-btn img {
+  width: 19px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.login-btn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vopros img{
+  width: 514.28px;
+  height: 514.28px;
+}
+
+.admin-or-dev {
+  height: min-content;
+  width: 780px;
+}
+
+
+.textadmina {
+  margin-top: 24px;
+  margin-bottom: 0;
+  line-height: 1.42;
+}
+
+
+.head {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+  border-radius: 4px;
+}
+
+.admin-image {
+  width: 520px;
+  height: 600px;
+  border-radius: 27px;
+  margin-top: 257px;
+  margin-bottom: 373px;
+  position: relative;
+}
+
+.container3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  width: 723px;
+  height: 2px;
+  background-color: #393939;
+  border-radius: 27px;
+}
+
+.faq-link {
+  width: 520px;
+  background-color: #101010;
+  border: solid 2px #3B3B3B;
+  border-radius: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.container4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 370px;
+}
+
+.cont-faq {
+  padding-left: 35px;
+  padding-right: 60px;
+}
+
+.strelca {
+  width: 19px;
+  height: 30px;
+}
+
+.cont-faq {
+  margin: 24px 0 24px 0;
+}
+
+.row {
+  width: 410px;
+  height: 290px;
+}
+
+.title-text {
+  font-family: "Unbounded-B";
+  font-size: 30px;
+  color: #fff;
+}
+
+.description-text {
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  color: #CFCFCF;
+}
+
+.link-pos {
+  display: flex;
+}
+
+.link-pos img{
+  justify-content: end;
+}
+
+.image-link {
+  display: flex;
+  justify-content: end;
+}
+
+.dicord-image {
+  width: 700px;
+  height: 460px;
+  background-color: #212121;
+  border-radius: 27px;
+}
+
+.discord {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-text-discord {
+  font-family: "Unbounded-B";
+  font-size: 36px;
+  color: #fff;
+  margin: 20px 0 24px 0;
+}
+
+.description-text-discord {
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.42;
+  color: #CFCFCF;
+  margin: 0 0 35px 0;
+}
+
+.btn-join {
+  background-color: #212121;
+  border: none;
+  border-radius: 27px;
+  color: #FFFFFF;
+  padding: 21px 25px;
+  font-size: 18px;
+  font-family: "Monserrat-SB";
+}
+
+.btn-join img{
+  margin-left: 9px;
+}
+
+
+.subworld-logo-footer {
+  justify-content: center;
+  display: flex;
+}
+
+.footer-div {
+  height: 328px;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-footer {
+  font-family: "Monserrat-SB";
+  font-size: 26px;
+  margin-bottom: 196px;
+  margin-top: 55px;
+  color: #FFFFFF;
+}
+
+.lic {
+  font-family: "Monserrat-M";
+  font-size: 18px;
+  color: #CFCFCF;
+}
+
+.catalog-text {
+  margin-top: 50px;
+  font-size: 24px;
+  color: white;
+  font-family: "Monserrat-SB";
+}
+
+.catalog-or-contact {
+  display: flex;
+}
+
+.catalog-or-contact a {
+  font-size: 18px;
+  font-family: "Monserrat-M";
+  text-decoration: none;
+  color: #CFCFCF;
+  margin-bottom: 10px;
+}
+
+.catalog-or-contact a {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.mainicon {
+  position: relative;
+  overflow: hidden;
+}
+
+.mainicon::after {
+  position: relative;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.10000000149011612) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.mainicon:hover::after {
+  opacity: 1;
+}
+
+.image-flaim:hover {
+  transform: translateY(-10px);
+}
+
+.mask {
+  width: 427px;
+  height: 475px;
+  border-radius: 27px;
+  overflow: hidden;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #535353;
+}
+
+.container-header {
+  width: 1322px;
+  margin: auto auto;
+}
+
+
+.container-header {
+  width: 1402px;
+  margin: auto auto;
+  background-color: #ffffff07;
+  border-radius: 27px;
+  display: flex;
+  z-index: 999;
+  justify-content: center;
+}
+
+.header-fixed {
+  position: fixed;
+}
+
+.header-fixed {
+  width: 100%;
+  background-color: #090808;
+  display: flex;
+  justify-content: center;
+}
+
+
+.container-header {
+  position: relative;
+}
+
+.bstartgame:hover {
+  background-color: #555555;
+}
+
+.dowlauncher:hover {
+  background-color: #2a2a2a;
+}
+.stroke-path-home {
+  stroke: #27BC8F;
+  stroke-width: 2px;
+}
+
+.nav-activ{
+  color: #27BC8F;
+  text-decoration: none;
+}
+
+.nav-activ-img {
+  color: #27BC8F;
+  text-decoration: none;
+}
+
+.nav-no-activ{
+  color: #ADADAD;
+  text-decoration: none;
+}
+
+.nav-main svg{
+  margin-right: 15px;
+}
+
+.nav svg {
+  margin-right: 15px;
+}
+
+.stroke-path-new {
+  stroke: #ADADAD;
+  stroke-width: 2px;
+}
+
+.check {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  margin: auto auto;
+}
+
+
+.container2 {
+  opacity: 0;
+  transform: translateY(25px) scale(.9);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container2.animated {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container3 {
+  opacity: 0;
+  transform: translateY(25px) scale(.9);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container3.animated {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.container4 {
+  opacity: 0;
+  transform: translateY(25px) scale(.9);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container4.animated {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.discord {
+  opacity: 0;
+  transform: translateY(25px) scale(.9);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.discord.animated {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.dicord-image {
+  margin-bottom: 370px;
+}
+
+.admin-image {
+  background-image: linear-gradient(113deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.10000000149011612) 100%);
+}
+  
+.subworld-blur {
+  position: absolute;
+  filter: blur(200px);
+  z-index: -1;
+}
+.subworld-logo-footer {
+  position: relative;
+}
+
+.vopros-blur {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: white;
+  position: absolute;
+  filter: blur(100px);
+  opacity: 0.5;
+  right: 30%;
+  top: 20%;
+}
+
+.cont-a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vopros {
+  position: relative;
+}
+
+.admin-or-dev-cont {
+  margin: 65px 91px 36px 53px;
+  width: 636px;
+}
+
+.admin-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.admin-image img {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+
+.admin-or-dev {
+  width: 778px;
+  height: 598px;
+}
+
+.line-admin {
+  width: 510px;
+  height: 2px;
+  background-image: linear-gradient(271deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255) 50%, rgba(255, 255, 255, 0) 100%);
+  margin: 108px auto 0px;
+}
+
+.adminavatar {
+  margin-top: 40px;
+  transform: scale(110%);
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.dicord-image{
+  display: flex;
+  justify-content: center;
+}
+
+.dicord-image img{
+  width: 236px;
+}
+
+.head {
+  transition: all 1s ease;
+}
+
+
+.activ-head {
+  filter: grayscale(0%);
+  margin-bottom: 25px;
+}
+
+.green-line {
+  width: 100%;
+  height: 8px;
+  background-color: #27BC8F;
+  position: fixed;
+  z-index: 999;
+}
+
+.container1 {
+  background-color: #101010;
+}
+
+/* owo {
+  
+⠀⠀⠀⣿⣿⡆⠀⠀⢸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⢸⣿⡇⠀⠀⣾⣿⡆⠀
+⠀⠀⠀⣿⣿⡇⠀⠀⢸⣿⢰⣿⡆⠀⣾⣿⡆⠀⣾⣷ ⣿⣿⡇⠀⠀⣿⣿⡇⠀
+⠀⠀⠀⣿⣿⡇⠀⠀⢸⣿⠘⣿⣿⣤⣿⣿⣿⣤⣿⡇⢻⣿⡇⠀⠀⣿⣿⡇⠀
+⠀⠀⠀⣿⣿⡇⠀⠀⢸⡿⠀⢹⣿⣿⣿⣿⣿⣿⣿⠁⢸⣿⣇⠀⢀⣿⣿⠇⠀
+⠀⠀⠀⠙⢿⣷⣶⣶⡿⠁⠀⠈⣿⣿⠟⠀⣿⣿⠇⠀⠈⠻⣿⣶⣾⡿⠋⠀⠀
+} */
+
+.admin-image img{
+  transition: all 0.8s ease;
+}
+
+
+.admin-image:hover img{
+  background-size: 100%;
+  transform: translateY(-60px);
+}
+
+.admin-image:hover {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.10000000149011612) 100%);
+}
+
+.p-description {
+  font-family: "Monserrat-M";
+  font-size: 20px;
+  color: #CFCFCF;
+  line-height: 1.70;
+}
+
+.cont-a p{
+  font-family: "Monserrat-SB";
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.strelca1 {
+  transform: rotate(90deg);
+} 
+
+.strelca1.strelca1-back {
+  transform: rotate(0deg);
+}
+
+.faq-link {
+  height: 422px;
+}
+
+.faq-link:hover {
+  background-color: #151515;
+}
+
+:root {
+  --gray: #393939;
+  --background-color: #090808;
+  --button-color: rgb(105, 119, 250);
+  --button-hover-color: rgba(105, 119, 250, .8);
+  --border-color: rgb(225, 230, 239);
+}
+
+
+.active.on {
+  stroke: #27BC8F;
+  stroke-width: 2px;
+}
+
+a {
+  color: rgb(173, 173, 173);
+}
