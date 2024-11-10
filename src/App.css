@@ -28,27 +28,27 @@
 
 @font-face{
   font-family: "Monserrat-M";
-  src: url("./font/Montserrat-Medium.ttf");
+  src: url("../public/font/Montserrat-Medium.ttf");
 }
 
 @font-face{
   font-family: "Monserrat-SB";
-  src: url("./font/Montserrat-SemiBold.ttf");
+  src: url("../public/font/Montserrat-SemiBold.ttf");
 }
 
 @font-face{
   font-family: "Monserrat-B";
-  src: url("./font/Montserrat-Bold.ttf");
+  src: url("../public/font/Montserrat-Bold.ttf");
 }
 
 @font-face {
   font-family: "Unbounded-B";
-  src: url('./font/Unbounded-Bold.ttf');
+  src: url('../public/font/Unbounded-Bold.ttf');
 }
 
 @font-face {
   font-family: "Unbounded-M";
-  src: url('./font/Unbounded-Medium.ttf');
+  src: url('../public/font/Unbounded-Medium.ttf');
 }
 
 
