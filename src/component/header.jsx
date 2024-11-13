@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Header = () => {
     const [activeTab, setActiveTab] = useState('home');
@@ -6,6 +6,35 @@ const Header = () => {
     const handleClick = (tab) => {
         setActiveTab(tab);
     };
+
+    useEffect(() => {
+        const headerfixed = document.querySelector('.header-fixed');
+        const triger = document.querySelector('.triger');
+        const header = document.querySelector('.header');
+        const lineHeader = document.querySelector('.lineHeader')
+        
+        function checkPosition() {
+            if (headerfixed && triger && header) {
+                const checkheader = headerfixed.getBoundingClientRect();
+                const checktriger = triger.getBoundingClientRect();
+
+            
+                if (checkheader.top > checktriger.bottom) {
+                    header.classList.add('animated');
+                    lineHeader.classList.add('animated')
+                } else {
+                    header.classList.remove('animated');
+                    lineHeader.classList.remove('animated')
+                }
+            }
+        }
+
+        window.addEventListener('scroll', checkPosition);
+
+        return () => {
+            window.removeEventListener('scroll', checkPosition);
+        };
+    }, []);
 
     return (
         <div>
@@ -124,5 +153,6 @@ const Header = () => {
         </div>
     );
 };
+
 
 export default Header;

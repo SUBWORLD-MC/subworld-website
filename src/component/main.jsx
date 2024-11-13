@@ -23,8 +23,10 @@ function Main() {
                     </div>
                 </div>
             </div>
+            <div className="triger"></div>
         </div>
     );
 }
+
 
 export default Main;
