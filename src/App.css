@@ -51,9 +51,19 @@
   src: url('../public/font/Unbounded-Medium.ttf');
 }
 
+:root {
+  --gray: #393939;
+  --background-color: #090808;
+  --button-color: rgb(105, 119, 250);
+  --button-hover-color: rgba(105, 119, 250, .8);
+  --border-color: rgb(225, 230, 239);
+  --while-20: #212121;
+  --green: #27bc8f;
+}
+
 
 .main-main {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -118,7 +128,7 @@ body {
 
 .textmain {
   color: white;
-  margin: 402px 0px 0px 0px;
+  margin: 351px 0px 0px 0px;
 }
 
 .nav a {
@@ -126,19 +136,7 @@ body {
   font-size: 18px;
 }
 
-.bstartgame {
-  margin: 0px 18px 0px 0px;
-  width: 225px;
-  height: 70px;
-  border-radius: 27px;
-  border: none;
-  background-color: #393939;
-  color: white;
-  font-family: "Monserrat-SB";
-  font-size: 23px;
-  padding: 21px 25px;
-  transition: all 0.3s;
-}
+
 
 .dowlauncher {
   width: 290px;
@@ -255,10 +253,10 @@ body {
 
 .mainicon {
   width: 427px;
-  height: 475px;
+  height: 517px;
   border-radius: 27px;
-  background-image: linear-gradient(113deg,rgba(255,255,255,0)0%,rgba(255,255,255,0.10000000149011612)100%);
-  margin-top: 340px;
+  background-image: linear-gradient(192deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.10000000149011612) 100%);
+  margin-top: 351px;
 }
 
 .name-admin {
@@ -276,8 +274,7 @@ body {
   border-radius: 27px;
   z-index: 99;
   background-size: 100%;
-  transition: transform 0.5s ease;
-  top: 90px;
+  top: 120px;
   right: 10px;
 }
 
@@ -534,13 +531,10 @@ body {
   opacity: 1;
 }
 
-.image-flaim:hover {
-  transform: translateY(-10px);
-}
 
 .mask {
   width: 427px;
-  height: 475px;
+  height: 517px;
   border-radius: 27px;
   overflow: hidden;
   position: relative;
@@ -585,13 +579,28 @@ body {
   position: relative;
 }
 
-.bstartgame:hover {
-  background-color: #555555;
+.bstartgame {
+  margin: 0px 18px 0px 0px;
+  width: 225px;
+  height: 70px;
+  border-radius: 27px;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  font-family: "Monserrat-SB";
+  font-size: 23px;
+  padding: 21px 25px;
+  transition: all 0.3s;
+}
+
+.bstartgame:hover { 
+  transform: scale(1.1);
 }
 
 .dowlauncher:hover {
   background-color: #2a2a2a;
 }
+
 .stroke-path-home {
   stroke: #27BC8F;
   stroke-width: 2px;
@@ -844,15 +853,6 @@ body {
   background-color: #151515;
 }
 
-:root {
-  --gray: #393939;
-  --background-color: #090808;
-  --button-color: rgb(105, 119, 250);
-  --button-hover-color: rgba(105, 119, 250, .8);
-  --border-color: rgb(225, 230, 239);
-}
-
-
 .active.on {
   stroke: #27BC8F;
   stroke-width: 2px;
@@ -860,4 +860,13 @@ body {
 
 a {
   color: rgb(173, 173, 173);
+  cursor: pointer;
+}
+
+.lineHeader {
+  background-color: var(--while-20);
+  height: 2px;
+  width: 100%;
+  position: fixed;
+  top: 119px;
 }
