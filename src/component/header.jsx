@@ -12,6 +12,7 @@ const Header = () => {
         const triger = document.querySelector('.triger');
         const header = document.querySelector('.header');
         const lineHeader = document.querySelector('.lineHeader')
+        const line1 = document.querySelector('.line1')
         
         function checkPosition() {
             if (headerfixed && triger && header) {
@@ -22,9 +23,11 @@ const Header = () => {
                 if (checkheader.top > checktriger.bottom) {
                     header.classList.add('animated');
                     lineHeader.classList.add('animated')
+                    line1.classList.add('animated')
                 } else {
                     header.classList.remove('animated');
                     lineHeader.classList.remove('animated')
+                    line1.classList.remove('animated')
                 }
             }
         }
@@ -72,6 +75,7 @@ const Header = () => {
                                         />
                                     </svg>
                                     <a className={activeTab === 'home' ? 'nav-activ' : ''}>Главная</a>
+                                    <div className={`line1 ${activeTab === 'home' ? 'active' : ''}`}></div>
                                 </div>
 
                                 <div
@@ -107,6 +111,7 @@ const Header = () => {
                                         />
                                     </svg>
                                     <a className={activeTab === 'donate' ? 'nav-activ' : ''}>Донат</a>
+                                    <div className={`line1 ${activeTab === 'donate' ? 'active' : ''}`}></div>
                                 </div>
 
                                 <div
@@ -135,6 +140,7 @@ const Header = () => {
                                         />
                                     </svg>
                                     <a className={activeTab === 'servers' ? 'nav-activ' : ''}>Сервера</a>
+                                    <div className={`line1 ${activeTab === 'servers' ? 'active' : ''}`}></div>
                                 </div>
                             </div>
                         </div>
@@ -147,9 +153,9 @@ const Header = () => {
                             </button>
                         </div>
                     </div>
+                    <div className='lineHeader'></div>
                 </div>
             </div>
-            <div className='lineHeader'></div>
         </div>
     );
 };

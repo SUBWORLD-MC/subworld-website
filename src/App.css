@@ -870,7 +870,7 @@ a {
   width: 100%;
   position: fixed;
   top: 116px;
-  z-index: 9999;
+  z-index: 998;
   transition: all 0.3s ease;
 }
 
@@ -878,7 +878,7 @@ a {
   width: 200px;
   height: 200px;
   position: absolute;
-  top: 100px;
+  top: -150px;
 }
 
 .header.animated {
@@ -893,4 +893,34 @@ a {
 
 .container {
   height: 2000px;
+}
+
+.nav-main {
+  position: relative;
+}
+
+.line1 {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--green);
+  top: 61px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.header-fixed {
+  z-index: 993;
+}
+
+.line1.animated {
+  top: 64px;
+  transition: all 0.3s ease;
+}
+
+.line1.active {
+  visibility: visible;
+  opacity: 1;
 }
