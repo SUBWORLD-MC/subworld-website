@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Header = () => {
+
     const [activeTab, setActiveTab] = useState('home');
 
     const handleClick = (tab) => {
@@ -8,36 +9,37 @@ const Header = () => {
     };
 
     useEffect(() => {
-        const headerfixed = document.querySelector('.header-fixed');
-        const triger = document.querySelector('.triger');
+        const headerFixed = document.querySelector('.header-fixed');
+        const trigger = document.querySelector('.triger');
         const header = document.querySelector('.header');
-        const lineHeader = document.querySelector('.lineHeader')
-        const line1 = document.querySelector('.line1')
-        
-        function checkPosition() {
-            if (headerfixed && triger && header) {
-                const checkheader = headerfixed.getBoundingClientRect();
-                const checktriger = triger.getBoundingClientRect();
-
-            
-                if (checkheader.top > checktriger.bottom) {
+        const lineHeader = document.querySelector('.lineHeader');
+        const line1 = document.querySelectorAll('.line1');
+    
+        const checkPosition = () => {
+            if (headerFixed && trigger && header) {
+                const checkHeader = headerFixed.getBoundingClientRect();
+                const checkTrigger = trigger.getBoundingClientRect();
+    
+                if (checkHeader.top > checkTrigger.bottom) {
                     header.classList.add('animated');
-                    lineHeader.classList.add('animated')
-                    line1.classList.add('animated')
+                    lineHeader.classList.add('animated');
                 } else {
                     header.classList.remove('animated');
-                    lineHeader.classList.remove('animated')
-                    line1.classList.remove('animated')
+                    lineHeader.classList.remove('animated');
                 }
             }
-        }
-
-        window.addEventListener('scroll', checkPosition);
-
+        };
+    
+        const handleScroll = () => {
+            requestAnimationFrame(checkPosition);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', checkPosition);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
 
     return (
         <div>

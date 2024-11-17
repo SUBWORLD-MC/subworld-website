@@ -1,31 +1,3 @@
-/* popa {
-    ⠄⠄⣿⣿⣿⣿⠘⡿⢛⣿⣿⣿⣿⣿⣧⢻⣿⣿⠃⠸⣿⣿⣿⠄⠄⠄⠄⠄
-    ⠄⠄⣿⣿⣿⣿⢀⠼⣛⣛⣭⢭⣟⣛⣛⣛⠿⠿⢆⡠⢿⣿⣿⠄⠄⠄⠄⠄
-    ⠄⠄⠸⣿⣿⢣⢶⣟⣿⣖⣿⣷⣻⣮⡿⣽⣿⣻⣖⣶⣤⣭⡉⠄⠄⠄⠄⠄
-    ⠄⠄⠄⢹⠣⣛⣣⣭⣭⣭⣁⡛⠻⢽⣿⣿⣿⣿⢻⣿⣿⣿⣽⡧⡄⠄⠄⠄
-    ⠄⠄⠄⠄⣼⣿⣿⣿⣿⣿⣿⣿⣿⣶⣌⡛⢿⣽⢘⣿⣷⣿⡻⠏⣛⣀⠄⠄
-    ⠄⠄⠄⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠙⡅⣿⠚⣡⣴⣿⣿⣿⡆⠄
-    ⠄⠄⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠄⣱⣾⣿⣿⣿⣿⣿⣿⠄
-    ⠄⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⠄
-    ⠄⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠣⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄
-    ⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠑⣿⣮⣝⣛⠿⠿⣿⣿⣿⣿⠄
-    ⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⠄⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄
-} */
-
-/* popa2 {
-    ⣸⣿⣿⢏⣼⣶⣶⣶⣶⣤⣶⡤⠐⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣯⣽⣛⠅⣾⣿⣿⣿⣿⣿⡽⣿⣧⡸⢿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⡷⠹⠛⠉⠁⠄⠄⠄⠄⠄⠄⠐⠛⠻⣿⣿⣿⣿
-    ⣿⣿⣿⠃⠄⠄⠄⠄⠄⣠⣤⣤⣤⡄⢤⣤⣤⣤⡘⠻⣿
-    ⣿⣿⡟⠄⠄⣀⣤⣶⣿⣿⣿⣿⣿⣿⣆⢻⣿⣿⣿⡎⠝
-    ⣿⡏⠄⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡎⣿⣿⣿⣿⠐
-    ⣿⡏⣲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢇⣿⣿⣿⡟⣼
-    ⣿⡠⠜⣿⣿⣿⣿⣟⡛⠿⠿⠿⠿⠟⠃⠾⠿⢟⡋⢶⣿
-    ⣿⣧⣄⠙⢿⣿⣿⣿⣿⣿⣷⣦⡀⢰⣾⣿⣿⡿⢣⣿⣿
-    ⣿⣿⣿⠂⣷⣶⣬⣭⣭⣭⣭⣵⢰⣴⣤⣤⣶⡾⢐⣿⣿
-    ⣿⣿⣿⣷⡘⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⢃⣼⣿⣿
-} */
-
 @font-face{
   font-family: "Monserrat-M";
   src: url("../public/font/Montserrat-Medium.ttf");
@@ -59,6 +31,9 @@
   --border-color: rgb(225, 230, 239);
   --while-20: #212121;
   --green: #27bc8f;
+  --while-100: #ffffff;
+  --while-80: #CECECE;
+  --while-60: #9C9C9C;
 }
 
 
@@ -875,24 +850,20 @@ a {
 }
 
 .triger {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  top: -150px;
+  top: 0px;
 }
 
 .header.animated {
-  margin: 13px 0 13px 0;
+  margin: 13px 0 10px 0;
   transition: all 0.3s ease;
 }
 
 .lineHeader.animated {
-  top: 108px;
+  top: 105px;
   transition: all 0.3s ease;
-}
-
-.container {
-  height: 2000px;
 }
 
 .nav-main {
@@ -907,7 +878,6 @@ a {
   top: 61px;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s ease;
   z-index: 9999;
 }
 
@@ -915,12 +885,87 @@ a {
   z-index: 993;
 }
 
-.line1.animated {
-  top: 64px;
-  transition: all 0.3s ease;
+.nav-main.active .line1 {
+  transform: scaleX(1);
+  transition: all 0.3s ease-in-out;
 }
 
-.line1.active {
+.line1 {
+  transform: scaleX(0.5);
+}
+
+.active {
   visibility: visible;
   opacity: 1;
+}
+
+.line1.animated {
+  transition: all 0.3 ease-in-out;;
+  top: 64px;
+}
+
+.Card-Image {
+  width: 763px;
+  height: 540px;
+  background-color: #141414;
+  border-radius: 27px;
+}
+
+.Card {
+  display: flex;
+}
+
+.card-title p {
+  font-size: 26px;
+  color: var(--green);
+  font-family: "Monserrat-B";
+  margin: 0 10px 0 0;
+}
+
+.line-card-title {
+  height: 2px;
+  width: 355px;
+  background-color: var(--green);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+}
+
+.Card-info {
+  margin-left: 50px;
+}
+
+.Card-name p {
+  font-family: "Unbounded-M";
+  font-size: 48px;
+  color: var(--while-100);
+  margin: 24px 0 0 0;
+}
+
+.Card-description p{
+  width: 508px;
+  font-size: 24px;
+  font-family: "Monserrat-M";
+  color: var(--while-80);
+  margin: 24px 0 0 0;
+}
+
+.Card {
+  margin-bottom: 100px;
+}
+
+.Card-data p{
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  color: var(--while-60);
+  margin: 24px 0 0 0;
+}
+
+.Card-end-line {
+  background-color: var(--while-20);
+  width: 510px;
+  height: 2px;
+  margin: 24px 0 0 0;
 }
