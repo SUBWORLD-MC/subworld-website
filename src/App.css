@@ -644,12 +644,6 @@ body {
 }
 
 
-.container4 {
-  opacity: 0;
-  transform: translateY(25px) scale(.9);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
 .container4.animated {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -968,4 +962,56 @@ a {
   width: 510px;
   height: 2px;
   margin: 24px 0 0 0;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--while-20);
+  margin: 10px 0;
+}
+
+.faq {
+  width: 723px;
+}
+
+.p-description {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.p-description.open {
+  max-height: 200px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 24px;
+  margin-bottom: 75px;
+}
+
+.p-description.closed {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cont-faq {
+  margin: 24px 0 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.strelca1 {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.container4 {
+  margin-top: 290px;
 }
