@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {NavLink} from 'react-router-dom'
 
 const Header = () => {
 
@@ -49,7 +50,8 @@ const Header = () => {
                         <div className="logo-or-nav">
                             <p className="logo">SUBWORLD</p>
                             <div className="nav">
-                                <div
+                                <NavLink
+                                    to='home'
                                     className={`nav-main ${activeTab === 'home' ? 'active' : ''}`}
                                     onClick={() => handleClick('home')}
                                 >
@@ -78,9 +80,10 @@ const Header = () => {
                                     </svg>
                                     <a className={activeTab === 'home' ? 'nav-activ' : ''}>Главная</a>
                                     <div className={`line1 ${activeTab === 'home' ? 'active' : ''}`}></div>
-                                </div>
+                                </NavLink>
 
-                                <div
+                                <NavLink
+                                    to='donat'
                                     className={`nav-main ${activeTab === 'donate' ? 'active' : ''}`}
                                     onClick={() => handleClick('donate')}
                                 >
@@ -114,9 +117,10 @@ const Header = () => {
                                     </svg>
                                     <a className={activeTab === 'donate' ? 'nav-activ' : ''}>Донат</a>
                                     <div className={`line1 ${activeTab === 'donate' ? 'active' : ''}`}></div>
-                                </div>
+                                </NavLink>
 
-                                <div
+                                <NavLink
+                                    to='servers'
                                     className={`nav-main ${activeTab === 'servers' ? 'active' : ''}`}
                                     onClick={() => handleClick('servers')}
                                 >
@@ -143,7 +147,7 @@ const Header = () => {
                                     </svg>
                                     <a className={activeTab === 'servers' ? 'nav-activ' : ''}>Сервера</a>
                                     <div className={`line1 ${activeTab === 'servers' ? 'active' : ''}`}></div>
-                                </div>
+                                </NavLink>
                             </div>
                         </div>
 

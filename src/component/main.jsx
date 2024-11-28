@@ -1,4 +1,8 @@
 import Rectangle from '../Rectangle.png';
+import Card from './card';
+import CardsList from './cardsList';  
+import EndList from './endList';
+import { Route, Routes } from 'react-router-dom';
 
 function Main() {
     return (
@@ -32,6 +36,8 @@ function Main() {
                 </div>
                 <div className="triger"></div>
             </div>
+            <CardsList />
+            <EndList/>
         </div>
     );
 }

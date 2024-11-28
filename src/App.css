@@ -34,6 +34,7 @@
   --while-100: #ffffff;
   --while-80: #CECECE;
   --while-60: #9C9C9C;
+  --while-10: #ffffff1d;
 }
 
 
@@ -96,7 +97,7 @@ body {
   margin-left: 60px;
 }
 
-.nav div{
+.nav .nav-main{
   margin-right: 35px;
   display: flex;
   align-items: center;
@@ -119,7 +120,7 @@ body {
   height: 70px;
   border-radius: 27px;
   border: none;
-  background-color: #212121;
+  background-color: #ffffff1b;
   color: white;
   font-family: "Monserrat-SB";
   font-size: 23px;
@@ -331,7 +332,7 @@ body {
 
 .faq-link {
   width: 520px;
-  background-color: #101010;
+  background-color: #ffffff01;
   border: solid 2px #3B3B3B;
   border-radius: 27px;
   display: flex;
@@ -343,7 +344,7 @@ body {
 .container4 {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 370px;
+  padding: 90px 0 190px 0;
 }
 
 .cont-faq {
@@ -574,7 +575,7 @@ body {
 }
 
 .dowlauncher:hover {
-  background-color: #2a2a2a;
+  background-color: #ffffff2b;
 }
 
 .stroke-path-home {
@@ -767,7 +768,7 @@ body {
 }
 
 .container1 {
-  background-color: #101010;
+  background-color: #151515;
 }
 
 /* owo {
@@ -817,10 +818,12 @@ body {
 
 .faq-link {
   height: 422px;
+  transition: all 0.3s;
 }
 
 .faq-link:hover {
-  background-color: #151515;
+  background-color: #ffffff03;
+  transition: all 0.3s;
 }
 
 .active.on {
@@ -898,71 +901,7 @@ a {
   top: 64px;
 }
 
-.Card-Image {
-  width: 763px;
-  height: 540px;
-  background-color: #141414;
-  border-radius: 27px;
-}
 
-.Card {
-  display: flex;
-}
-
-.card-title p {
-  font-size: 26px;
-  color: var(--green);
-  font-family: "Monserrat-B";
-  margin: 0 10px 0 0;
-}
-
-.line-card-title {
-  height: 2px;
-  width: 355px;
-  background-color: var(--green);
-}
-
-.card-title {
-  display: flex;
-  align-items: center;
-}
-
-.Card-info {
-  margin-left: 50px;
-}
-
-.Card-name p {
-  font-family: "Unbounded-M";
-  font-size: 48px;
-  color: var(--while-100);
-  margin: 24px 0 0 0;
-}
-
-.Card-description p{
-  width: 508px;
-  font-size: 24px;
-  font-family: "Monserrat-M";
-  color: var(--while-80);
-  margin: 24px 0 0 0;
-}
-
-.Card {
-  margin-bottom: 100px;
-}
-
-.Card-data p{
-  font-family: "Monserrat-M";
-  font-size: 24px;
-  color: var(--while-60);
-  margin: 24px 0 0 0;
-}
-
-.Card-end-line {
-  background-color: var(--while-20);
-  width: 510px;
-  height: 2px;
-  margin: 24px 0 0 0;
-}
 
 .line {
   width: 100%;
@@ -1012,10 +951,6 @@ a {
   transition: transform 0.3s ease;
 }
 
-.container4 {
-  margin-top: 290px;
-}
-
 .forest {
   height: 1061px;
   position: absolute;
@@ -1037,9 +972,19 @@ a {
 .cardsList {
   background-color: #0F0F0F;
   width: 100%;
-  height: 800px;
   position: relative;
   z-index: 3;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .circle {
@@ -1049,6 +994,7 @@ a {
   border-radius: 100%;
   filter: blur(180px);
   position: absolute;
+  animation: breathing 3s infinite ease-in-out;
 }
 
 .circle1 {
@@ -1093,4 +1039,207 @@ body {
   position: absolute;
   left: -10000px;
   z-index: 1;
+}
+
+.cardsList {
+  padding-top: 120px;
+}
+
+.title-p {
+  font-family: "Unbounded-M";
+  font-size: 32px;
+  color: var(--while-100);
+}
+
+.description-p {
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  color: var(--while-80);
+}
+
+.Card {
+  border-radius: 8px;
+  /* border: 1px solid #ffffff2b; */
+  background-image: linear-gradient(225deg, rgba(255, 255, 255, 0.050) 0%, rgba(0, 0, 0, 0.050) 100%);
+  padding: 42px 38px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.cardImage {
+  width: 686px;
+  height: 495px;
+  border-radius: 8px;
+  margin-right: 50px;
+}
+
+.Card-title {
+  font-family: "Unbounded-M";
+  font-size: 36px;
+  color: var(--while-100);
+  margin: 0;
+  width: 513px;
+}
+
+.line-card {
+  width: 187px;
+  height: 2px;
+  background-color: var(--green);
+  margin-top: 24px;
+}
+
+.Card-description {
+  width: 508px;
+  font-family: "Monserrat-M";
+  font-size: 24px;
+  margin-top: 24px;
+  color: var(--while-80);
+}
+
+.Card-info {
+  width: 191px;
+  height: 70px;
+  margin-top: 24px;
+  background-color: #212121;
+  border: none;
+  border-radius: 27px;
+  color: var(--while-100);
+  font-family: "Monserrat-M";
+  font-size: 23px;
+}
+
+.Card-data {
+  font-family: "Monserrat-M";
+  font-size: 23px;
+  color: #9C9C9C;
+  margin-bottom: 0;
+  margin-top: 44px;
+  margin-left: 24px;
+}
+
+.card-flex {
+  display: flex;
+}
+
+.description-p {
+  margin-bottom: 90px;
+}
+
+.loadPost {
+  width: 231px;
+  height: 70px;
+  background-color: #ffffff1f;
+  border: none;
+  border-radius: 27px;
+  justify-content: center;
+}
+
+.j {
+  display: flex;
+  justify-content: center;
+}
+
+.loadPost {
+  color: #FFFFFF;
+  font-family: "Monserrat-M";
+  font-size: 23px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.endList {
+  background-color: #151515;
+}
+
+.CardLike {
+  position: absolute;
+  background-color: #111111;
+  border-radius: 43px;
+  padding: 13px 15px 11px;
+  left: 0;
+}
+
+.cardImage {
+  position: relative;
+}
+
+.CardLike p {
+  font-family: "Unbounded-M";
+  font-size: 15px;
+  color: white;
+  margin: 0;
+}
+
+.CardLike {
+  display: flex;
+}
+
+.CardLike img {
+  margin-right: 6px;
+}
+
+.endList {
+  padding: 120px 0px 0;
+}
+
+.discordInfo {
+  display: flex;
+}
+
+.discordImage {
+  width: 700px;
+  height: 460px;
+  background-color: #ffffff1d;
+  border-radius: 27px;
+}
+
+.discordInfo {
+  margin-top: 93px;
+}
+
+.p2 {
+  width: 559px;
+}
+
+.infoDisdcordP {
+  margin-left: 60px;
+}
+
+.DiscordTitlle {
+  font-family: "Unbounded-B";
+  font-size: 36px;
+  color: var(--while-100);
+  margin: 20px 0 24px 0;
+}
+
+.p2 {
+  font-size: 24px;
+  font-family: "Monserrat-M";
+  color: var(--while-80);
+  margin: 0;
+}
+
+.joinbtndiscord {
+  margin-top: 35px;
+  width: 244px;
+  height: 64px;
+  border-radius: 27px;
+  border: none;
+  background-color: var(--while-10);
+  font-family: "Monserrat-M";
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgDiscord {
+  margin-left: 14px;
+}
+
+.footer {
+  transform-origin: bottom center;
+  flex-direction: column;
+  margin-top: 400px;
 }
