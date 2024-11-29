@@ -1,6 +1,6 @@
-import Faq from './faq';
-import Discord from './discord'; 
-import Footer from './footer';
+import Faq from './Faq';
+import Discord from './Discord'; 
+import Footer from './Footer';
 
 function endList() {
     return (

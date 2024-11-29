@@ -1,10 +1,10 @@
 import Rectangle from '../Rectangle.png';
-import Card from './card';
-import CardsList from './cardsList';  
-import EndList from './endList';
+import Card from '../components/Сard';
+import CardsList from '../components/CardsList';  
+import EndList from '../components/EndList';
 import { Route, Routes } from 'react-router-dom';
 
-function Main() {
+function Home() {
     return (
         <div>
             <div className="main-main">
@@ -43,4 +43,4 @@ function Main() {
 }
 
 
-export default Main;
+export default Home;

@@ -1,29 +1,36 @@
 @font-face{
   font-family: "Monserrat-M";
-  src: url("../public/font/Montserrat-Medium.ttf");
+  src: url("../../public/font/Montserrat-Medium.ttf");
 }
 
 @font-face{
   font-family: "Monserrat-SB";
-  src: url("../public/font/Montserrat-SemiBold.ttf");
+  src: url("../../public/font/Montserrat-SemiBold.ttf");
 }
 
 @font-face{
   font-family: "Monserrat-B";
-  src: url("../public/font/Montserrat-Bold.ttf");
+  src: url("../../public/font/Montserrat-Bold.ttf");
 }
 
 @font-face {
   font-family: "Unbounded-B";
-  src: url('../public/font/Unbounded-Bold.ttf');
+  src: url('../../public/font/Unbounded-Bold.ttf');
 }
 
 @font-face {
   font-family: "Unbounded-M";
-  src: url('../public/font/Unbounded-Medium.ttf');
+  src: url('../../public/font/Unbounded-Medium.ttf');
 }
 
 :root {
+  --Monserrat-M: "Monserrat-M";
+  --Monserrat-SB: "Monserrat-SB";
+  --Monserrat-B: "Monserrat-B";
+  --Unbounded-B: "Unbounded-B";
+  --Unbounded-M: "Unbounded-M";
+  
+
   --gray: #393939;
   --background-color: #090808;
   --button-color: rgb(105, 119, 250);
@@ -1242,4 +1249,58 @@ body {
   transform-origin: bottom center;
   flex-direction: column;
   margin-top: 400px;
+}
+
+.ServerCard {
+  width: 100%;
+  border-radius: 27px;
+  border: 2px solid #ffffff10;
+  padding: 40px;
+}
+
+.pass {
+  height: 117px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.online {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var(--green);
+}
+
+.online-p h1 {
+  color: var(--while-100);
+  font-family: var(--Unbounded-B);
+}
+
+.online-p p{
+  color: var(--while-60);
+  font-family: "Monserrat-M";
+  font-size: 22px;
+  width: 976px;
+  margin: 0;
+}
+
+.statusServer p {
+  font-size: 20px;
+}
+
+.statusServer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.ServerCard {
+  display: flex;
+  gap: 42px;
+}
+
+.ServerCard img{
+  width: 222px;
+  height: 222px;
 }
