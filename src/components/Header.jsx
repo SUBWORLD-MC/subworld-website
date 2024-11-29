@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {NavLink} from 'react-router-dom'
+import {NavLink, useLocation} from 'react-router-dom'
 
 const Header = () => {
+    const location = useLocation();
 
     const [activeTab, setActiveTab] = useState('home');
 
@@ -10,6 +11,19 @@ const Header = () => {
     };
 
     useEffect(() => {
+        const routeToTab = {
+            "/home": "home",
+            "/servers": "servers", // Исправлено значение на 'servers', чтобы совпадало с остальным кодом
+            "/donat": "donate",  // Исправлено значение на 'donate', чтобы совпадало с остальным кодом
+        };
+        const currentTab = routeToTab[location.pathname] || "home";
+        if (currentTab !== activeTab) {
+            setActiveTab(currentTab);
+        }
+    }, [location.pathname, activeTab]);
+
+    useEffect(() => {
+
         const headerFixed = document.querySelector('.header-fixed');
         const trigger = document.querySelector('.triger');
         const header = document.querySelector('.header');

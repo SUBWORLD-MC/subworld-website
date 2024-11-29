@@ -5,7 +5,7 @@ import Card from './components/Сard';
 import Footer from './components/Footer';
 import CardsList from './components/CardsList';  
 import EndList from './components/EndList';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Server from './pages/Server';
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
             <div className='subworld'>
                 <Header />
                 <Routes>
+                    <Route path="/" element={<Navigate to="/home" replace />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/servers" element={<Server />} />
                 </Routes>
