@@ -189,7 +189,7 @@ body {
 }
 
 .mainbutton {
-  margin-bottom: 160px;
+  margin-bottom: 100px;
 }
 
 
@@ -559,7 +559,6 @@ body {
 
 .header-fixed {
   width: 100%;
-  background-color: #090808;
   display: flex;
   justify-content: center;
 }
@@ -575,7 +574,7 @@ body {
   height: 70px;
   border-radius: 27px;
   border: none;
-  background-color: var(--green);
+  background-image: linear-gradient(268deg,rgba(83,187,190,1)0%,rgba(39,188,143,1)100%);
   color: white;
   font-family: "Monserrat-SB";
   font-size: 23px;
@@ -597,7 +596,7 @@ body {
 }
 
 .nav-activ{
-  color: #27BC8F;
+  color: var(--while-100);
   text-decoration: none;
 }
 
@@ -965,12 +964,12 @@ a {
 }
 
 .forest {
-  height: 1061px;
+  height: 1000px;
   position: absolute;
-  right: -1850px;
+  right: -800px;
   z-index: 1;
-  top: 200px;
-  /* filter: brightness(80%); */
+  top: 70px;
+  width: 1920px;
 }
 
 .container {
@@ -1003,7 +1002,7 @@ a {
 .circle {
   width: 461.8px;
   height: 461.8px;
-  background-color: var(--green);
+  background-color: #53BBBE;
   border-radius: 100%;
   filter: blur(180px);
   position: absolute;
@@ -1321,4 +1320,20 @@ body {
 
 .strelca1, .cont-a, .p-description {
   user-select: none;
+}
+
+.Ellipse {
+  top: 400px;
+  right: -600px;
+  position: absolute;
+  filter: blur(140px);
+}
+
+.btn-style {
+  width: 147px;
+  height: 46px;
+  background-color: #1C1C1C;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
 }

@@ -12,7 +12,13 @@ function Home() {
                     <div className="main-index">
                         <div className="main">
                             <div className="textmain">
-                                <p className="UnBMain">ДОБРО<br/>ПОЖАЛОВАТЬ<br/>НА ЛАМПОВЫЙ<br/>ПРОЕКТ<br/>ПО <span style={{color: "#27BC8F"}}>МАЙНКРАФТУ</span></p>
+                            <p className="UnBMain">
+                                ДОБРО<br />ПОЖАЛОВАТЬ<br />НА ЛАМПОВЫЙ<br />
+                                <span style={{ background: "linear-gradient(268deg,rgba(83,187,190,1)0%,rgba(39,188,143,1)100%)", WebkitBackgroundClip: "text", color: "transparent"}}>
+                                    ПРОЕКТ
+                                    <br />ПО МАЙНКРАФТУ
+                                </span>
+                                </p>
                                 <p className="MoMeMain"><span style={{ color: '#ADADAD' }}>Открой для себя новый мир возможностей в<br />нашем ламповом проекте по Майнкрафту</span></p>
                                 <div className="mainbutton">
                                     <button className="bstartgame">Начать играть</button>
@@ -26,11 +32,8 @@ function Home() {
                         <div>
                             <div style={{backgroundImage: `url(${Rectangle})`, backgroundRepeat: 'repeat', mixBlendMode: "overlay"}} className="pixel" alt="" />
                             <img src="./png/forest.png" alt="" className="forest"/>
-                            <div>
-                                <div className="circle circle1"></div>
-                                <div className="circle circle2"></div>
-                                <div className="circle circle3"></div>
-                            </div>
+                            <img className='Ellipse' src="./svg/Ellipse.svg" alt="" />
+                            
                         </div>
                     </div>
                 </div>
