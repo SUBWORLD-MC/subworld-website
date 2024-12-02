@@ -1,4 +1,4 @@
-import Rectangle from '../Rectangle.png';
+import Rectangle from '../image/Rectangle.png';
 import Card from '../components/Сard';
 import CardsList from '../components/CardsList';  
 import EndList from '../components/EndList';
